@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  main {
+  
+    padding: 0;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+  
+    background-image: radial-gradient(circle at 22.76% 42.7%, #b4c767 0, #a2c369 10%, #8ebc6b 20%, #7ab36d 30%, #66a86d 40%, #539a6b 50%, #428c68 60%, #338066 70%, #277664 80%, #1c6d62 90%, #146761 100%);
+  }
+  
+  .conteiner {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+  }
+  
+  .sombra {
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  }
