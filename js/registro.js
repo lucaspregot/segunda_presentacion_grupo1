@@ -1,120 +1,133 @@
-//obtengo los botones de registro e inicio de sesion
-let botonRegistrarse = document.getElementById('botonRegistrarse')
+let inputUser = document.getElementById('inputUser')
+let inputPass = document.getElementById('inputPass')
+let inputRepeatPass = document.getElementById('inputRepeatPass')
+let inputCheck = document.getElementById('idCheck')
 
+let divErrUser = document.getElementById('divErrUser')
+let divErrPass = document.getElementById('divErrPass')
+let divErrRepeatUser = document.getElementById('divErrRepeatPass')
+let divCheck = document.getElementById('divCheck')
 
-//obtengo los input de registarse
-let inputNombreUsuarioRegistro = document.getElementById('inputNombreUsuarioRegistro')
-let inputCorreoElectronico = document.getElementById('inputCorreoElectronico')
-let inputContraseniaRegistro = document.getElementById('inputContraseniaRegistro')
-let inputReContraseniaRegistro = document.getElementById('inputReContraseniaRegistro')
-//obtengo los mensajes de error de los input
-let msjCampoUsuarioVacio = document.getElementById('msjCampoUsuarioVacio')
-msjCampoUsuarioVacio.classList = 'd-none'
+let buttonRegister = document.getElementById('buttonRegister')
 
-let msjEmail = document.getElementById('msjEmail')
-msjEmail.classList = 'd-none'
+let usersLocalStorage = JSON.parse(localStorage.getItem('users')) || []
+let usersArray = []
 
-let msjContrasenia = document.getElementById('msjContrasenia')
-msjContrasenia.classList = 'd-none'
-
-let msjReContrasenia = document.getElementById('msjReContrasenia')
-msjReContrasenia.classList = 'd-none'
-
-//obtengo la base de datos del localStorage
-let baseDeDatosLS=JSON.parse(localStorage.getItem('usuarios')) || []
-
-//array de cuentas creadas
-let cuentas= []
-
-//recorro el localSrotage y almaceno el nuevo usuario
-if (baseDeDatosLS.length > 0) {
-    baseDeDatosLS.forEach(usuarios => cuentas.push(usuarios))
-  }
-
-//genero el id dinamico
-let idUsuario=baseDeDatosLS.length ===0 ? 1 :
- baseDeDatosLS[baseDeDatosLS.length -1].id+1
-
-//objeto de almacenamiento de los datos del formulario de registro
-let NombreUsuario=''
-let CorreoElectronico=''
-let Contrasenia=''
-let ReContrasenia=''
-
-let registroUsuario = {
-    id:idUsuario,
-    NombreUsuario: '',
-    CorreoElectronico: '',
-    Contrasenia: '',
-    ReContrasenia: '',
-    rol:'usuario',
-    login:false
+if (usersLocalStorage.length > 0) {
+  usersLocalStorage.forEach(user => usersArray.push(user))
 }
 
+divErrUser.classList = 'd-none'
+divErrPass.classList = 'd-none'
+divErrRepeatUser.classList = 'd-none'
+divCheck.classList = 'd-none'
 
-//funcion de escucha de los input de formulario de registro
-let inputRegistrase = (event) => {
-    const { name, value } = event.target
-    registroUsuario[name] = value
-    
+let user = ''
+let pass = ''
+let repeatPass = ''
+let check = false
+
+let idUser = usersLocalStorage.length > 0 ? usersLocalStorage[usersLocalStorage.length - 1].id + 1 : 1
+
+const objetoForm = {
+  id: idUser,
+  user: '',
+  pass: '',
+  repeatPass: '',
+  check: false,
+  role: 'user',
+  login: false,
+  deleted: false
+}
+
+const changeInput = (event) => {
+  const { name, value } = event.target
+  if (name === 'check') {
+    objetoForm[name] = inputCheck.checked
+    divCheck.classList = 'd-none'
+  } else {
+    objetoForm[name] = value
     switch (name) {
-        case 'NombreUsuario':
-            msjCampoUsuarioVacio.classList = 'd-none'
-            inputNombreUsuarioRegistro.classList.remove('is-invalid')
-            break;
-        case 'CorreoElectronico':
-            msjEmail.classList = 'd-none'
-            inputCorreoElectronico.classList.remove('is-invalid')
-            break;
-        case 'Contrasenia':
-            msjContrasenia.classList = 'd-none'
-            inputContraseniaRegistro.classList.remove('is-invalid')
-            break;
-        case 'ReContrasenia':
-        
-            msjReContrasenia.classList = 'd-none'
-            inputReContraseniaRegistro.classList.remove('is-invalid')
-            break;
-    }
+      case 'user':
+        divErrUser.classList = 'd-none'
+        inputUser.classList.remove('is-invalid');
+        break;
+      case 'pass':
+        divErrPass.classList = 'd-none'
+        inputPass.classList.remove('is-invalid');
+        break;
+      case 'repeatPass':
+        divErrRepeatUser.classList = 'd-none'
+        inputRepeatPass.classList.remove('is-invalid');
+        break;
 
-}
-//funcion del boton registrarse
-let registrarse = (event) => {
-    const { NombreUsuario, CorreoElectronico, Contrasenia, ReContrasenia } = registroUsuario
-    if (NombreUsuario && CorreoElectronico && Contrasenia && ReContrasenia) {
-        if (Contrasenia===ReContrasenia) {
-            cuentas.push(registroUsuario)
-        localStorage.setItem('usuarios', JSON.stringify(cuentas))
-        
-        }else{
-            alert('las contraseñas no coinciden')
-        }
-        
-        
+      default:
+        console.log('error no existe ese name en el objeto')
+        break;
     }
-    if (!NombreUsuario && !CorreoElectronico && !Contrasenia && !ReContrasenia) {
-        alert('formulario vacio')
-    } else if (!NombreUsuario) {
-        msjCampoUsuarioVacio.classList = 'd-block text-danger'
-        inputNombreUsuarioRegistro.classList.add('is-invalid')
-    } else if (!CorreoElectronico) {
-        msjEmail.classList = 'd-block text-danger'
-        inputCorreoElectronico.classList.add('is-invalid')
-    } else if (!Contrasenia) {
-        msjContrasenia.classList = 'd-block text-danger'
-        inputContraseniaRegistro.classList.add('is-invalid')
-    } else if (!ReContrasenia) {
-        msjReContrasenia.classList = 'd-block text-danger'
-        inputReContraseniaRegistro.classList.add('is-invalid')
-    }
-    
+  }
 }
 
-//escucha del boton registrarse
-botonRegistrarse.addEventListener('click', registrarse)
+const sendRegister = () => {
+  const { user, pass, repeatPass, check } = objetoForm
+  
+  if (user && pass && repeatPass && check) {
+    if(pass === repeatPass){
+      usersArray.push(objetoForm)
+      localStorage.setItem('users', JSON.stringify(usersArray))
+      Swal.fire(
+        'El usuario se creo exitosamente!',
+        'Revisa tu email recibiras un mail de confirmacion',
+        'success'
+      )
+      setTimeout(() => {
+       location.href='../index.html' 
+      }, 3000)
+    }else{
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Las contraseñas no coinciden',
+      })
+      inputPass.classList.add('is-invalid');
+      inputRepeatPass.classList.add('is-invalid');
+    }
 
-//pongo a escuchar los input de registrarse
-inputNombreUsuarioRegistro.addEventListener('input', inputRegistrase)
-inputCorreoElectronico.addEventListener('input', inputRegistrase)
-inputContraseniaRegistro.addEventListener('input', inputRegistrase)
-inputReContraseniaRegistro.addEventListener('input', inputRegistrase)
+  } else if (!user && !pass && !repeatPass && !check) {
+    switch (true) {
+      case !user:
+        divErrUser.classList = 'd-block text-danger'
+        inputUser.classList.add('is-invalid');
+      case !pass:
+        divErrPass.classList = 'd-block text-danger'
+        inputPass.classList.add('is-invalid');
+      case !repeatPass:
+        divErrRepeatUser.classList = 'd-block text-danger'
+        inputRepeatPass.classList.add('is-invalid');
+      case !check:
+        divCheck.classList = 'd-block text-danger'
+    }
+  } else {
+    if (!user) {
+      divErrUser.classList = 'd-block invalid-feedback text-danger'
+      inputUser.classList.add('is-invalid');
+    }
+    if (!pass) {
+      divErrPass.classList = 'd-block text-danger'
+      inputPass.classList.add('is-invalid');
+    }
+    if (!repeatPass) {
+      divErrRepeatUser.classList = 'd-block text-danger'
+      inputRepeatPass.classList.add('is-invalid');
+    }
+    if (!check) {
+      divCheck.classList = 'd-block text-danger'
+    }
+  }
+}
+
+inputUser.addEventListener('input', changeInput)
+inputPass.addEventListener('input', changeInput)
+inputRepeatPass.addEventListener('input', changeInput)
+inputCheck.addEventListener('click', changeInput)
+buttonRegister.addEventListener('click', sendRegister)

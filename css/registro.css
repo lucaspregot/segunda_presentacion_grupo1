@@ -1,0 +1,27 @@
+.div-mensaje-principal{
+    border: 5px solid #03A6A6;
+    border-radius: 10px;
+    background-color: #BAD9D9;
+  }
+  
+  .div-mensaje-principal2{
+    position: absolute;
+    border: 5px solid #03A6A6;
+    background-color: #BAD9D9;
+    bottom: 0px;
+  }
+  @media(max-width: 500px){
+    .div-img-principal img{
+      height: 55vh;
+    }
+  
+    .div-mensaje-principal{
+      display: none;
+    }
+  }
+  
+  @media(min-width: 500px){
+    .div-mensaje-principal2{
+      display: none;
+    }
+  }

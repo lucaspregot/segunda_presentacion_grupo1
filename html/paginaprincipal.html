@@ -10,6 +10,193 @@
 </head>
 
 <body>
+  <header class="header ">
+    <nav class="navbar navbar-expand-lg Navbar-color navbar-class">
+        <div class="container-fluid">
+            <div class="d-inline-flex">
+                <div class="d-none d-lg-block ">
+                    <img src="https://th.bing.com/th/id/R.9c9656864c2312056327cf044bbd3652?rik=fP6adb4Wd5rvjw&pid=ImgRaw&r=0"
+                        alt="" width="50">
+                </div>
+                <!--comienzo de boton hamburguesa-->
+                <button class="fondo-boton navbar-toggler " type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-start mt-1" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <img class="ms-3 d-lg-none"
+                            src="https://th.bing.com/th/id/R.9c9656864c2312056327cf044bbd3652?rik=fP6adb4Wd5rvjw&pid=ImgRaw&r=0"
+                            alt="" width="50">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./html/acercaDeNosotros.html">Acerca de Nosotros</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <form class="d-flex mt-3 d-lg-none " role="search">
+                            <input class="form-control me-2" type="search"
+                                placeholder="Buscar profesional o especialidad" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Buscar</button>
+                        </form>
+                    </div>
+                </div>
+                <!--fin de boton hamburguesa-->
+                <img class="ms-3 d-lg-none"
+                    src="https://th.bing.com/th/id/R.9c9656864c2312056327cf044bbd3652?rik=fP6adb4Wd5rvjw&pid=ImgRaw&r=0"
+                    alt="" width="50">
+            </div>
+
+            <!--buscador en tamaños grandes de pantalla-->
+            <div class="d-none d-lg-block">
+                <form class="d-flex mt-1 " role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar profesional o especialidad"
+                        aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+            <!--fin de buscador pantallas grandes-->
+
+            <div class="d-inline-flex">
+
+                <div class="align-content-center">
+                    <button type="button" class="btn btn-primary boton-registrarse btn-sm bg-secondary "
+                        data-bs-toggle="modal" data-bs-target="#modalIniciarSesion" id="botonIniciarSesion">
+                        Iniciar sesion
+                    </button>
+                    <button type="button" class="btn btn-primary boton-registrarse btn-sm bg-secondary"
+                        data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Registrarse
+                    </button>
+                </div>
+            </div>
+            <!-- Modal registrarse-->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Registrarse</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body bg-secondary">
+                            <form class="row">
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Nombre de usuario</label>
+                                    <input type="text" class="form-control" id="inputNombreUsuarioRegistro"
+                                        name="NombreUsuario" aria-describedby="emailHelp"
+                                        placeholder="Nombre y apellido" maxlength="20" required>
+                                    <div id="msjCampoUsuarioVacio" class="form-text">Campo vacio</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Correo electronico</label>
+                                    <input type="email" class="form-control" id="inputCorreoElectronico"
+                                        name="CorreoElectronico" aria-describedby="emailHelp"
+                                        placeholder="Ej: Usuario@gmail.com" maxlength="30" required>
+                                    <div id="msjEmail" class="form-text">Campo vacio</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                                    <input type="password" class="form-control" id="inputContraseniaRegistro"
+                                        name="Contrasenia" maxlength="15" minlength="6" pattern="[a-z A-Z 0-9]+"
+                                        placeholder="Minusculas, mayusculas y numeros" required>
+                                    <div id="msjContrasenia" class="form-text">Campo vacio</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">Repetir contraseña</label>
+                                    <input type="password" class="form-control" id="inputReContraseniaRegistro"
+                                        name="ReContrasenia" maxlength="15" minlength="6" pattern="[a-z A-Z 0-9]+"
+                                        placeholder="Repita la contraseña" required>
+                                    <div id="msjReContrasenia" class="form-text">Campo vacio</div>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                                    <label class="form-check-label" for="exampleCheck1">Estoy de acuerdo con
+                                        Terminos y Condiciones</label>
+                                </div>
+                                <button type="button" class="btn btn-primary"
+                                    id="botonRegistrarse">Registrarse</button>
+                            </form>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Modal iniciar sesion -->
+            <div class="modal fade" id="modalIniciarSesion" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Iniciar sesion</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body bg-secondary">
+                            <form class="row">
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Nombre de usuario</label>
+                                    <input type="text" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder="Ingrese nombre de usuario"
+                                        maxlength="20" required>
+                                    <div id="emailHelp" class="form-text"></div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1"
+                                        maxlength="15" minlength="6" pattern="[a-z A-Z 0-9]+"
+                                        placeholder="Ingrese contraseña" required>
+                                </div>
+
+
+                                <button type="submit" class="btn btn-primary">Iniciar sesion</button><a
+                                    href="Vista-usuario.html" target="_blank">.</a>
+                            </form>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </nav>
+</header>
     <main>
       <!-- carousel -->
     <div id="carouselExample" class="carousel slide">
