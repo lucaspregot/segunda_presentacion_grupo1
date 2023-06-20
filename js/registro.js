@@ -81,7 +81,7 @@ const sendRegister = () => {
         'success'
       )
       setTimeout(() => {
-       location.href='../index.html' 
+       location.href='iniciarSesion.html' 
       }, 3000)
     }else{
       Swal.fire({

@@ -86,57 +86,20 @@
                 <div class="d-inline-flex">
 
                     <div class="align-content-center">
-                        <button type="button" class="btn btn-primary boton-registrarse btn-sm bg-secondary "
-                            data-bs-toggle="modal" data-bs-target="#modalIniciarSesion" id="botonIniciarSesion">
-                            Iniciar sesion
+                        <button type="button" class="btn btn-primary boton-registrarse btn-sm bg-secondary ">
+                            <a class="text-decoration-none" href="./html/iniciarSesion.html">Iniciar sesion</a>
+
                         </button>
                         <button type="button" class=" text-white btn btn-primary boton-registrarse btn-sm bg-secondary">
-                             <a class="text-decoration-none" href="./html/registro.html">Registrarse</a>
+                            <a class="text-decoration-none" href="./html/registro.html">Registrarse</a>
                         </button>
                     </div>
                 </div>
-                
-                
-
-                <!-- Modal iniciar sesion -->
-                <div class="modal fade" id="modalIniciarSesion" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Iniciar sesion</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body bg-secondary">
-                                <form class="row">
-                                    <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Nombre de usuario</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1"
-                                            aria-describedby="emailHelp" placeholder="Ingrese nombre de usuario"
-                                            maxlength="20" required>
-                                        <div id="emailHelp" class="form-text"></div>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword1"
-                                            maxlength="15" minlength="6" pattern="[a-z A-Z 0-9]+"
-                                            placeholder="Ingrese contraseña" required>
-                                    </div>
 
 
-                                    <button type="submit" class="btn btn-primary">Iniciar sesion</button>
-                                </form>
 
 
-                            </div>
 
-
-                        </div>
-
-                    </div>
-                </div>
             </div>
 
 
@@ -248,6 +211,7 @@
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
     <script src="./js/registro.js"></script>
+    <script src="./js/iniciarSesion.js"></script>
 </body>
 
 </html>
