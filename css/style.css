@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+
+  .body {
+    font-family: "Montserrat", sans-serif;
+    ;
+}
+
+.titulos {
+  font-family: "Montserrat bold", sans-serif;
+  
+}
+
+.presentacion-class {
+  color:rgb(48,83,157);
+  font-family: "Montserrat medium", sans-serif;
+  
+   
+}
+  
+.footer-class{
+    background-image: linear-gradient(to right,rgb(48,83,157),rgb(79, 176, 129));
+    font-family: "Montserrat medium", sans-serif;
+  
+    }
+    
+    
+  
+  
