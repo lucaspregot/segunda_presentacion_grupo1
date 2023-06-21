@@ -24,7 +24,7 @@ const arrayProfesionales = [
 
     },
     {
-        id: "5",
+        id: "4",
         nombre: 'Mariela',
         apellido: 'Soto',
         profesion: 'Medicina familiar',
@@ -32,7 +32,7 @@ const arrayProfesionales = [
 
     },
     {
-        id: "6",
+        id: "5",
         nombre: 'José',
         apellido: 'Farias',
         profesion: 'Fisioterapia',
@@ -40,7 +40,7 @@ const arrayProfesionales = [
 
     },
     {
-        id: "7",
+        id: "6",
         nombre: 'German',
         apellido: 'Suarez',
         profesion: 'Odontologo',
@@ -48,7 +48,7 @@ const arrayProfesionales = [
 
     },
     {
-        id: "8",
+        id: "7",
         nombre: 'Estefania',
         apellido: 'Juarez',
         profesion: 'Pediatra',
@@ -56,7 +56,7 @@ const arrayProfesionales = [
 
     },
     {
-        id: "4",
+        id: "8",
         nombre: 'Análisis Bioquímicos',
         apellido: '',
         profesion: '',
@@ -64,7 +64,7 @@ const arrayProfesionales = [
 
     },
     {
-        id: "8",
+        id: "9",
         nombre: 'Ecografías',
         apellido:"",
         profesion:"",

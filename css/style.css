@@ -3,7 +3,7 @@ margin: 0;
 padding: 0;
 }
 
-  .body {
+  .body-class {
     font-family: "Montserrat medium", sans-serif;
     background-color: rgb(237, 237, 237);
   
@@ -95,17 +95,8 @@ font-family: "Montserrat medium", sans-serif;
 /* fin pagina user */
 
 
-/* nav bar */
-.header{
-      background-color: rgb(48,83,157);
-      }
-      
-.fondo-boton{
-          background-color: #5875b7;
-      }
-.boton-registrarse{
-          text-decoration: none;
-      } 
-    
-  /* fin nav bar */
+/* pagina profesinal */
+
+
+  /* fin pagina profesional */
   
