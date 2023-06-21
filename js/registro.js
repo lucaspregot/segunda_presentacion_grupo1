@@ -3,6 +3,9 @@ let inputPass = document.getElementById('inputPass')
 let inputRepeatPass = document.getElementById('inputRepeatPass')
 let inputCheck = document.getElementById('idCheck')
 
+
+let botonRegistrarse=document.getElementById('botonRegistrarse')
+
 let divErrUser = document.getElementById('divErrUser')
 let divErrPass = document.getElementById('divErrPass')
 let divErrRepeatUser = document.getElementById('divErrRepeatPass')
@@ -91,6 +94,7 @@ const sendRegister = () => {
       })
       inputPass.classList.add('is-invalid');
       inputRepeatPass.classList.add('is-invalid');
+      botonRegistrarse.classList='d-none'
     }
 
   } else if (!user && !pass && !repeatPass && !check) {

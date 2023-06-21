@@ -1,7 +1,7 @@
 *{
-    margin: 0;
-    padding: 0;
-  }
+margin: 0;
+padding: 0;
+}
 
   .body {
     font-family: "Montserrat medium", sans-serif;
@@ -28,8 +28,8 @@
 }
   
 .footer-class{
-    background-image: linear-gradient(to right,rgb(48,83,157),rgb(79, 176, 129));
-    font-family: "Montserrat medium", sans-serif;
+background-image: linear-gradient(to right,rgb(48,83,157),rgb(79, 176, 129));
+font-family: "Montserrat medium", sans-serif;
   
     }
 /* pagina user */
