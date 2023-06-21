@@ -1,3 +1,4 @@
+
 const arrayProfesionales = [
     {
         id: "1",
@@ -76,7 +77,10 @@ const arrayProfesionales = [
 localStorage.setItem('arrayProfesionales', JSON.stringify(arrayProfesionales))
 
 
-const divCard = document.getElementById('cardProfesionales')
+let divCard = document.getElementById('cardProfesionales')
+
+let inputBuscador = document.getElementById('inputBuscador')
+let inputBuscadorHamburguesa = document.getElementById('inputBuscadorHamburguesa')
 
 divCard.innerHTML = arrayProfesionales.map(
     (medico) =>
@@ -93,4 +97,36 @@ divCard.innerHTML = arrayProfesionales.map(
 )
     .join('');
 
-    
+
+
+    const filtroBuscador = (event) => {
+        const { value } = event.target
+        let termino = value.toLowerCase()
+        let filterProf = arrayProfesionales.filter((prof) => {
+          let nombreApellidoProf = `${prof.apellido} ${prof.nombre}`.toLowerCase()
+          let profesion = `${prof.profesion}`.toLowerCase()
+          return nombreApellidoProf.includes(termino) || profesion.includes(termino)
+        })
+      
+        filterProf.length > 0
+          ?
+          divCard.innerHTML = filterProf
+            .map(
+              (medico) => `
+            <div class="card mx-5" style="width: 18rem;">
+              <img src="${medico.foto}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">${medico.apellido} ${medico.nombre}</h5>
+                <p class="card-text">Profesión: ${medico.profesion}</p>
+                <a href="#" class="btn btn-outline-success">Pedir Turno</a>
+              </div>
+            </div>
+            `
+            )
+            .join('')
+            :
+            alert('No existe lo que buscas')
+      }
+
+inputBuscador.addEventListener('input', filtroBuscador)
+inputBuscadorHamburguesa.addEventListener('input', filtroBuscador)
