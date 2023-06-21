@@ -38,7 +38,7 @@ const objetoForm = {
   pass: '',
   repeatPass: '',
   check: false,
-  role: 'admin',
+  role: 'user',
   login: false,
   deleted: false
 }
