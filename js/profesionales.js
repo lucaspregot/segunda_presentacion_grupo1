@@ -1,6 +1,6 @@
 const arrayProfesionales = [
     {
-        id:"1",
+        id: "1",
         nombre: 'Belén',
         apellido: 'Arias',
         profesion: 'Ginecología',
@@ -8,7 +8,7 @@ const arrayProfesionales = [
 
     },
     {
-        id:"2",
+        id: "2",
         nombre: 'Soledad',
         apellido: 'Lazarte',
         profesion: 'Psicología',
@@ -16,7 +16,7 @@ const arrayProfesionales = [
 
     },
     {
-        id:"3",
+        id: "3",
         nombre: 'Belén',
         apellido: 'Arias',
         profesion: 'Ginecología',
@@ -24,7 +24,7 @@ const arrayProfesionales = [
 
     },
     {
-        id:"4",
+        id: "4",
         nombre: 'Belén',
         apellido: 'Arias',
         profesion: 'Ginecología',
@@ -32,7 +32,7 @@ const arrayProfesionales = [
 
     },
     {
-        id:"5",
+        id: "5",
         nombre: 'Belén',
         apellido: 'Arias',
         profesion: 'Ginecología',
@@ -40,7 +40,7 @@ const arrayProfesionales = [
 
     },
     {
-        id:"6",
+        id: "6",
         nombre: 'Belén',
         apellido: 'Arias',
         profesion: 'Fisioterapia',
@@ -48,7 +48,7 @@ const arrayProfesionales = [
 
     },
     {
-        id:"7",
+        id: "7",
         nombre: 'Belén',
         apellido: 'Arias',
         profesion: 'Odontologo',
@@ -56,7 +56,15 @@ const arrayProfesionales = [
 
     },
     {
-        id:"8",
+        id: "8",
+        nombre: 'Estefania',
+        apellido: 'Juarez',
+        profesion: 'Pediatra',
+        foto: 'https://img.freepik.com/free-photo/beautiful-female-doctor-white-coat-standing-arms-crossed-white-wall_114579-47701.jpg?w=900&t=st=1686693143~exp=1686693743~hmac=361f093bf73b5968d50270dcb7896819aa6e081f552953a1be4331687f8a51fc'
+
+    },
+    {
+        id: "8",
         nombre: 'Estefania',
         apellido: 'Juarez',
         profesion: 'Pediatra',
@@ -73,14 +81,14 @@ const divCard = document.getElementById('cardProfesionales')
 divCard.innerHTML = arrayProfesionales.map(
     (medico) =>
 
-`<div class="card col-sm-12 col-md-6 col-lg-3" style="width: 18rem;">
-    <img src="${medico.foto}" class="card-img-top" alt="...">
+        `<div class="card" style="width: 18rem;">
+     <img src="${medico.foto}" class="card-img-top" alt="...">
     <div class="card-body">
     <h5 class="card-title">${medico.nombre} ${medico.apellido}</h5>
       <p class="card-text">Profesión: ${medico.profesion}</p>
       <a href="./profesional.html?id=${medico.id}" class="btn btn-primary">Pedir Turno</a>
-    </div>
+    
+  </div>
   </div>`
 )
-.join('');
- 
+    .join('');

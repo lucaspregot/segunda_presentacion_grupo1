@@ -1,4 +1,4 @@
-let usersLocalStorage = JSON.parse(localStorage.getItem('arrayUsuarios')) || []
+let usersLocalStorage = JSON.parse(localStorage.getItem('usersArray')) || []
 let userID = location.search.split('=')[1]
 console.log(userID)
 let user = usersLocalStorage.filter((usuario) => {
