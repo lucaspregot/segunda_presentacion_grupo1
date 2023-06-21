@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/navbar.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -13,13 +13,13 @@
 </head>
 
 <body>
-    <header class="header ">
-        <nav class="navbar navbar-expand-lg Navbar-color navbar-class">
+    <header class="header fixed-top">
+        <nav class="navbar navbar-expand-lg Navbar-color navbar-class ">
             <div class="container-fluid">
                 <div class="d-inline-flex">
                     <div class="d-none d-lg-block ">
                         <img src="https://trello.com/1/cards/6491ff613e977d52e7a09440/attachments/6491ffad73abd047c214444e/previews/6491ffb073abd047c21447d6/download/LOGO_COLOR_SIN_FONDO.png"
-                        alt="" width="100">
+                            alt="" width="100">
                     </div>
                     <!--comienzo de boton hamburguesa-->
                     <button class="fondo-boton navbar-toggler " type="button" data-bs-toggle="offcanvas"
@@ -27,12 +27,12 @@
                         aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="offcanvas offcanvas-start mt-2" tabindex="-1" id="offcanvasNavbar"
+                    <div class="offcanvas offcanvas-start mt-2 " tabindex="-1" id="offcanvasNavbar"
                         aria-labelledby="offcanvasNavbarLabel">
-                        <div class="offcanvas-header">
+                        <div class="offcanvas-header ">
                             <img class="ms-3 d-lg-none"
-                            src="https://trello.com/1/cards/6491ff613e977d52e7a09440/attachments/6491ffad73abd047c214444e/previews/6491ffb073abd047c21447d6/download/LOGO_COLOR_SIN_FONDO.png"
-                            alt="" width="100">
+                                src="https://trello.com/1/cards/6491ff613e977d52e7a09440/attachments/6491ffad73abd047c214444e/previews/6491ffb073abd047c21447d6/download/LOGO_COLOR_SIN_FONDO.png"
+                                alt="" width="100">
                             <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
                                 aria-label="Close"></button>
@@ -46,19 +46,19 @@
                                     <a class="nav-link" href="./html/acercaDeNosotros.html">Acerca de Nosotros</a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Dropdown
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li>
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Dropdown
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                             <form class="d-flex mt-3 d-lg-none " role="search">
                                 <input class="form-control me-2" type="search"
@@ -78,7 +78,7 @@
                     <form class="d-flex mt-1 " role="search">
                         <input class="form-control me-2" type="search" placeholder="Buscar profesional o especialidad"
                             aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                        <button class="btn  btn-outline-dark" type="submit">Buscar</button>
                     </form>
                 </div>
                 <!--fin de buscador pantallas grandes-->
@@ -86,12 +86,13 @@
                 <div class="d-inline-flex">
 
                     <div class="align-content-center">
-                        <button type="button"id="botonRegistrarse" class="btn btn-primary boton-registrarse btn-sm bg-secondary ">
-                            <a class="text-decoration-none" href="./html/iniciarSesion.html">Iniciar sesion</a>
+                        <button type="button" id="botonRegistrarse" class="btn btn-primary boton-registrarse btn-sm  ">
+                            <a class="text-decoration-none text-light" href="./html/iniciarSesion.html">Iniciar
+                                sesion</a>
 
                         </button>
-                        <button type="button" class=" text-white btn btn-primary boton-registrarse btn-sm bg-secondary">
-                            <a class="text-decoration-none" href="./html/registro.html">Registrarse</a>
+                        <button type="button" class="  btn btn-primary boton-registrarse btn-sm">
+                            <a class="text-decoration-none text-light" href="./html/registro.html">Registrarse</a>
                         </button>
                     </div>
                 </div>
@@ -143,22 +144,26 @@
         </div>
 
         <div class="presentacion-class d-flex justify-content-evenly align-content-center px-5 py-3">
-
+        <div class="conteiner">
+            
             <div>
+            <div class="row">
                 <h5>Atenciones primarias</h5>
                 <h5>Análisis bioquimicos</h5>
                 <h5>Ecografías</h5>
             </div>
-            <div>
+            <div class="row">
                 <h5>Fisioterapia</h5>
                 <h5>Ginecología</h5>
                 <h5>Psicología</h5>
             </div>
-            <div>
+            <div class="row">
                 <h5>Pediatría</h5>
                 <h5>Odontología</h5>
                 <h5>Medicina familiar</h5>
             </div>
+        </div>
+        </div>
         </div>
 
         <div class="mx-5 my-5 d-flex  justify-content-center">
@@ -180,27 +185,31 @@
 
     <!-- footer -->
 
-    <footer class="footer-class py-5 d-flex justify-content-between align-content-center px-5">
-        <div><img
-                src="https://img.freepik.com/free-vector/hospital-logo-design-vector-medical-cross_53876-136743.jpg?w=740&t=st=1686000854~exp=1686001454~hmac=88dab184b62aa3850a3999eb53fbcadfed2c8a674ba3e69fa35fa66f2b17350c"
-                width="150" height="150" alt=""></div>
+    <footer class="footer-class p-5 ">
+        <div class="conteiner ">
+            <div class="row">
+                <div class="d-flex justify-content-center align-content-center col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4"><img
+                        src="https://img.freepik.com/free-vector/hospital-logo-design-vector-medical-cross_53876-136743.jpg?w=740&t=st=1686000854~exp=1686001454~hmac=88dab184b62aa3850a3999eb53fbcadfed2c8a674ba3e69fa35fa66f2b17350c"
+                        width="150" height="150" alt=""></div>
 
-        <div class="contact text-white">
+                <div class="contact text-white col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
 
-            <h5>Datos de contacto</h5>
-            <p>Teléfono: +543814558265</p>
-            <p>Mail: email@email.com</p>
-            <p>Ubicación: Salta 650, SM de Tucumán</p>
-            <h5>Horarios de atención</h5>
-            <p>Lunes a Viernes 8 a 20hs</p>
+                    <div class="d-flex justify-content-center align-content-center"><h5>Datos de contacto</h5></div>
+                    <div class="d-flex justify-content-center align-content-center"><p>Teléfono: +543814558265</p></div>
+                    <div class="d-flex justify-content-center align-content-center"><p>Mail: email@email.com</p></div>
+                    <div class="d-flex justify-content-center align-content-center"><p>Ubicación: Salta 650, SM de Tucumán</p></div>
+                    <div class="d-flex justify-content-center align-content-center"><h5>Horarios de atención</h5></div>
+                    <div class="d-flex justify-content-center align-content-center"><p>Lunes a Viernes 8 a 20hs</p></div>
 
-        </div>
+                </div>
 
-        <div>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.577427972545!2d-65.21138432380577!3d-26.82158068940357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c3e03b47d0f%3A0xccb8177f8283e623!2sSalta%20600%2C%20T4000IRS%20San%20Miguel%20de%20Tucum%C3%A1n%2C%20Tucum%C3%A1n!5e0!3m2!1ses-419!2sar!4v1685999524509!5m2!1ses-419!2sar"
-                width="150" height="150" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="d-flex justify-content-center align-content-center col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.577427972545!2d-65.21138432380577!3d-26.82158068940357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c3e03b47d0f%3A0xccb8177f8283e623!2sSalta%20600%2C%20T4000IRS%20San%20Miguel%20de%20Tucum%C3%A1n%2C%20Tucum%C3%A1n!5e0!3m2!1ses-419!2sar!4v1685999524509!5m2!1ses-419!2sar"
+                        width="150" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
         </div>
     </footer>
 
