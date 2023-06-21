@@ -82,6 +82,7 @@ let divCard = document.getElementById('cardProfesionales')
 let inputBuscador = document.getElementById('inputBuscador')
 let inputBuscadorHamburguesa = document.getElementById('inputBuscadorHamburguesa')
 
+
 divCard.innerHTML = arrayProfesionales.map(
     (medico) =>
 
@@ -127,6 +128,9 @@ divCard.innerHTML = arrayProfesionales.map(
             :
             alert('No existe lo que buscas')
       }
+
+
+      
 
 inputBuscador.addEventListener('input', filtroBuscador)
 inputBuscadorHamburguesa.addEventListener('input', filtroBuscador)
