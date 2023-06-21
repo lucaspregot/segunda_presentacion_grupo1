@@ -97,6 +97,10 @@ font-family: "Montserrat medium", sans-serif;
 
 /* pagina profesinal */
 
+.error-message {
+  color: red;
+}
+
 
   /* fin pagina profesional */
   

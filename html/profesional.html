@@ -6,6 +6,8 @@
     <title>Turnos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
+    
+    
 </head>
 <body class="body-class">
 
@@ -33,17 +35,20 @@
     </div> -->
 
     <div class="d-flex justify-content-center">
-        <form>
+        <form id="formFechaHora">
             <div class="mb-3">
               <label for="fecha" class="form-label">Fecha:</label>
-              <input type="date" class="form-control" id="fecha" name="fecha">
-              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              <input type="date" class="form-control" id="imputFecha" name="fecha">
+              <div id="mensajeErrorFecha" class="form-text error-message"></div>
+              
             </div>
             <div class="mb-3">
               <label for="hora" class="form-label">Hora:</label>
               <input type="time" class="form-control" id="hora" name="hora">
+              <div id="mensajeErrorHora" class="form-text error-message"></div>
             </div>
-            <button type="submit" value="Enviar" class="btn boton-card" onclick="enviarFormulario()">Enviar</button>
+            <button type="submit" value="Enviar" class="btn boton-card">Enviar</button>
+            
           </form>
     </div>
 
@@ -51,6 +56,7 @@
    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
     <script src="../js/profesional.js"></script>
 </body>
 </html>

@@ -20,15 +20,27 @@ divProfesional.innerHTML = profesional.map((profesional) => {
 });
 
 
-function enviarFormulario() {
-      let fechaSeleccionada = document.getElementById("fecha").value;
-      let horaSeleccionada = document.getElementById("hora").value;
-      
-      // Aquí puedes realizar las acciones que desees con los valores seleccionados
-      // por ejemplo, enviarlos a un servidor o mostrarlos en la consola
-      console.log("Fecha seleccionada:", fechaSeleccionada);
-      console.log("Hora seleccionada:", horaSeleccionada);
-      
-      // Evitar que el formulario se envíe
-      event.preventDefault();
-    }
+document.getElementById("formFechaHora").addEventListener("submit", function(event) {
+  let fechaSeleccionada = document.getElementById("imputFecha").value;
+  let horaSeleccionada = document.getElementById("hora").value;
+  let fechaError = document.getElementById("mensajeErrorFecha");
+  let horaError = document.getElementById("mensajeErrorHora");
+
+  if (!fechaSeleccionada) {
+    fechaError.textContent = "Por favor, seleccione una fecha.";
+    event.preventDefault();
+  } else {
+    fechaError.textContent = "";
+  }
+
+  if (!horaSeleccionada) {
+    horaError.textContent = "Por favor, seleccione una hora.";
+    event.preventDefault();
+  } else {
+    horaError.textContent = "";
+  }
+
+/*   if ((fechaSeleccionada) && (horaSeleccionada)) {
+    location.href = `../turnos.html`
+  } */
+});
