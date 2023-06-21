@@ -3,14 +3,14 @@ margin: 0;
 padding: 0;
 }
 
-.body {
-font-family: "Montserrat", sans-serif;
-background-color: rgb(237, 237, 237);
+  .body {
+    font-family: "Montserrat", sans-serif;
+    background-color: rgb(237, 237, 237);
   
 }
 
 .titulos {
-font-family: "Montserrat medium", sans-serif;
+  font-family: "Montserrat medium", sans-serif;
   
 
 }
@@ -18,8 +18,8 @@ font-family: "Montserrat medium", sans-serif;
 
 
 .presentacion-class {
-color:rgb(48,83,157);
-font-family: "Montserrat medium", sans-serif;
+  color:rgb(48,83,157);
+  font-family: "Montserrat medium", sans-serif;
 
   
    
@@ -29,23 +29,23 @@ font-family: "Montserrat medium", sans-serif;
 background-image: linear-gradient(to right,rgb(48,83,157),rgb(79, 176, 129));
 font-family: "Montserrat medium", sans-serif;
   
-}
+    }
 /* pagina user */
 
 .titulo-user {
-font-family: "Montserrat medium", sans-serif;
-color: rgb(48,83,157);
+  font-family: "Montserrat medium", sans-serif;
+  color: rgb(48,83,157);
 
 
 }
 
 .boton-card {
-cursor: pointer;
-background-image: linear-gradient(to right,rgb(48,83,157),rgb(79, 176, 129));
-border: solid 1px;
-transition-duration: 0.2s;
-color: white;
-font-family: "montserrat medium", sans-serif;
+    cursor: pointer;
+    background-image: linear-gradient(to right,rgb(48,83,157),rgb(79, 176, 129));
+    border: solid 1px;
+    transition-duration: 0.2s;
+    color: white;
+    font-family: "montserrat medium", sans-serif;
 
 
 }
@@ -55,16 +55,15 @@ font-family: "montserrat medium", sans-serif;
 
 /* nav bar */
 .header{
-background-color: rgb(48,83,157);
-}
+      background-color: rgb(48,83,157);
+      }
       
 .fondo-boton{
-background-color: #5875b7;
-}
-
+          background-color: #5875b7;
+      }
 .boton-registrarse{
- text-decoration: none;
-} 
+          text-decoration: none;
+      } 
     
-
+  /* fin nav bar */
   
