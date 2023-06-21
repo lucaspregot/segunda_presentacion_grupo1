@@ -82,8 +82,8 @@
 
                 <div class="align-content-center">
                     <button type="button" class="btn btn-primary boton-registrarse btn-sm bg-secondary "
-                        data-bs-toggle="modal" data-bs-target="#modalIniciarSesion" id="botonIniciarSesion">
-                        Iniciar sesion
+                        data-bs-toggle="modal" data-bs-target="#modalIniciarSesion" id="botonIniciarSesion"><a href="">Iniciar sesion</a>
+                        
                     </button>
                     <button type="button" class="btn btn-primary boton-registrarse btn-sm bg-secondary"
                         data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -91,104 +91,7 @@
                     </button>
                 </div>
             </div>
-            <!-- Modal registrarse-->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Registrarse</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body bg-secondary">
-                            <form class="row">
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Nombre de usuario</label>
-                                    <input type="text" class="form-control" id="inputNombreUsuarioRegistro"
-                                        name="NombreUsuario" aria-describedby="emailHelp"
-                                        placeholder="Nombre y apellido" maxlength="20" required>
-                                    <div id="msjCampoUsuarioVacio" class="form-text">Campo vacio</div>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Correo electronico</label>
-                                    <input type="email" class="form-control" id="inputCorreoElectronico"
-                                        name="CorreoElectronico" aria-describedby="emailHelp"
-                                        placeholder="Ej: Usuario@gmail.com" maxlength="30" required>
-                                    <div id="msjEmail" class="form-text">Campo vacio</div>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                                    <input type="password" class="form-control" id="inputContraseniaRegistro"
-                                        name="Contrasenia" maxlength="15" minlength="6" pattern="[a-z A-Z 0-9]+"
-                                        placeholder="Minusculas, mayusculas y numeros" required>
-                                    <div id="msjContrasenia" class="form-text">Campo vacio</div>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Repetir contraseña</label>
-                                    <input type="password" class="form-control" id="inputReContraseniaRegistro"
-                                        name="ReContrasenia" maxlength="15" minlength="6" pattern="[a-z A-Z 0-9]+"
-                                        placeholder="Repita la contraseña" required>
-                                    <div id="msjReContrasenia" class="form-text">Campo vacio</div>
-                                </div>
-                                <div class="mb-3 form-check">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
-                                    <label class="form-check-label" for="exampleCheck1">Estoy de acuerdo con
-                                        Terminos y Condiciones</label>
-                                </div>
-                                <button type="button" class="btn btn-primary"
-                                    id="botonRegistrarse">Registrarse</button>
-                            </form>
-
-
-                        </div>
-
-
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Modal iniciar sesion -->
-            <div class="modal fade" id="modalIniciarSesion" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Iniciar sesion</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body bg-secondary">
-                            <form class="row">
-                                <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Nombre de usuario</label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" placeholder="Ingrese nombre de usuario"
-                                        maxlength="20" required>
-                                    <div id="emailHelp" class="form-text"></div>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-                                    <input type="password" class="form-control" id="exampleInputPassword1"
-                                        maxlength="15" minlength="6" pattern="[a-z A-Z 0-9]+"
-                                        placeholder="Ingrese contraseña" required>
-                                </div>
-
-
-                                <button type="submit" class="btn btn-primary">Iniciar sesion</button><a
-                                    href="Vista-usuario.html" target="_blank">.</a>
-                            </form>
-
-
-                        </div>
-
-
-                    </div>
-
-                </div>
-            </div>
+            
         </div>
 
 
