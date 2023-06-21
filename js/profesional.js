@@ -40,7 +40,5 @@ document.getElementById("formFechaHora").addEventListener("submit", function(eve
     horaError.textContent = "";
   }
 
-/*   if ((fechaSeleccionada) && (horaSeleccionada)) {
-    location.href = `../turnos.html`
-  } */
+
 });
