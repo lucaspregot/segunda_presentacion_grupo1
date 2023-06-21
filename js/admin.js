@@ -1,11 +1,11 @@
-let usersLocalStorage = JSON.parse(localStorage.getItem('usersArray')) || []
+let usersLocalStorage = JSON.parse(localStorage.getItem('users')) || []
 let userID = location.search.split('=')[1]
 
 let user = usersLocalStorage.filter((usuario) => {
   return usuario.id === parseInt(userID)
 })
 /* const buttonLogout = document.getElementById('logout') */
-const tBody = document.getElementById('tBody')
+let tBody = document.getElementById('tBody')
 let userIndex = usersLocalStorage.findIndex((user) => user.id === parseInt(userID)) 
 
 tBody.innerHTML = usersLocalStorage.map((user) =>
@@ -14,9 +14,7 @@ tBody.innerHTML = usersLocalStorage.map((user) =>
   <th scope="row">${user.id}</th>
   <td>${user.user}</td>
   <td>${user.role}</td>
-  <td>${user.mail}</td>
-  <td>${user.telefono}</td>
-  <td>${user.direccion}</td>
+ 
 
   <td class="d-flex">
 
@@ -55,7 +53,7 @@ tBody.innerHTML = usersLocalStorage.map((user) =>
 `
 ).join('')
 
-const inputUsers = document.querySelectorAll('input[name="user"]');
+const inputUsers = document.getElementById('inputUser');
 const buttonDeleted = document.getElementById('buttonDeleted')
 /* buttonDeleted.disabled = true */
 
@@ -66,14 +64,14 @@ const editFunction = (event) => {
  inputChangeUser = value
 }
 
-inputUsers.forEach((inputUser) => {
+/*inputUsers.forEach((inputUser) => {
   inputUser.addEventListener('input', editFunction);
-});
+});*/
 
 const editUser = (id) => {
  const userEditIndex = usersLocalStorage.findIndex((user) => user.id === id) 
   usersLocalStorage[userEditIndex].user = inputChangeUser
-  localStorage.setItem('arrayUsuarios', JSON.stringify(usersLocalStorage))
+  localStorage.setItem('user', JSON.stringify(arrayProfesionales))
   inputChangeUser = ''
   location.reload()
 
